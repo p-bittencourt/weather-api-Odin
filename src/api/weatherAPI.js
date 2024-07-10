@@ -3,9 +3,15 @@ export default async function fetchWeatherData(city = "london") {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
+    if (data.error) {
+      alert("City not found. Reseting to London.");
+      throw new Error(data.error.message);
+    }
     return processWeatherData(data);
   } catch (e) {
-    console.log(e);
+    document.getElementById("user-input").value = "";
+    return fetchWeatherData();
   }
 }
 
