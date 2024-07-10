@@ -22,4 +22,7 @@ function renderContent(data) {
     data.temperatureCelsius + "C";
   document.getElementById("condition-text").textContent = data.conditionText;
   document.getElementById("condition-icon").src = data.conditionIcon;
+  document.getElementById("max-temp").textContent = "Max: " + data.maxTemp;
+  document.getElementById("min-temp").textContent = "Min: " + data.minTemp;
 }
+//
