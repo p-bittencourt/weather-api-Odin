@@ -18,7 +18,8 @@ async function handleSubmit(event) {
 function renderContent(data) {
   document.getElementById("city-name").textContent = data.cityName;
   document.getElementById("country-name").textContent = data.countryName;
-  document.getElementById("temperature").textContent = data.temperatureCelsius;
+  document.getElementById("temperature").textContent =
+    data.temperatureCelsius + "C";
   document.getElementById("condition-text").textContent = data.conditionText;
   document.getElementById("condition-icon").src = data.conditionIcon;
 }

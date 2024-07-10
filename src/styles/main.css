@@ -18,10 +18,48 @@ html {
   flex-direction: row;
   justify-content: space-around;
   width: 50vw;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Georgia", serif;
+}
+
+@media (max-width: 768px) {
+  .weather-card {
+    flex-direction: column;
+  }
 }
 
 .weather-icon {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+form {
+  button {
+    padding: 5px 10px; /* Adjusts the size of the button */
+    font-family: "Arial", sans-serif; /* Sets the font */
+    font-size: 16px; /* Sets the font size */
+    color: #000; /* Text color */
+    background-color: antiquewhite; /* Button color */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes the cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+
+  label {
+    font-family: "Georgia", serif;
+  }
+}
+
+h1 {
+  font-family: "Georgia", serif;
+  font-size: 40px;
 }
