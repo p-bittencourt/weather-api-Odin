@@ -9,14 +9,15 @@ html {
 
 .content {
   text-align: center;
-  width: 80vw;
+  width: 90vw;
   justify-content: center;
 }
 
 .weather-card {
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  justify-content: center;
+  width: 60vw;
   margin: 1.5rem auto;
   background-color: antiquewhite;
   border-radius: 15px;
@@ -29,12 +30,20 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding-top: 0.5rem;
+}
+
+.mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
