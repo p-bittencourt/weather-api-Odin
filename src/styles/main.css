@@ -1,0 +1,27 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  width: 80vw;
+  justify-content: center;
+}
+
+.weather-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50vw;
+  margin: 1rem auto;
+}
+
+.weather-icon {
+  display: flex;
+  align-items: center;
+}
