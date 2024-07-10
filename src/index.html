@@ -8,6 +8,18 @@
   <body>
     <div class="content">
       <h1>Weather Watch</h1>
+      <form id="user-input-form" method="post">
+        <div class="input-container">
+          <label for="user-input">Enter a city:</label>
+          <input
+            name="user-input"
+            type="text"
+            id="user-input"
+            placeholder="London"
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
       <div class="weather-card">
         <div class="city-info">
           <h2 id="city-name"></h2>

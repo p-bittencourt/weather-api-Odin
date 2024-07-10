@@ -1,18 +1,24 @@
 import "./styles/main.css";
 import getWeatherData from "./api/weatherAPI.js";
 
-let searchedCity = "london";
-const data = await getWeatherData(searchedCity);
-console.log(data);
+const data = await getWeatherData();
+renderContent(data);
 
-const cityName = document.getElementById("city-name");
-const countryName = document.getElementById("country-name");
-const temperature = document.getElementById("temperature");
-const conditionText = document.getElementById("condition-text");
-const conditionIcon = document.getElementById("condition-icon");
+const form = document.getElementById("user-input-form");
+form.addEventListener("submit", handleSubmit);
 
-cityName.textContent = data.cityName;
-countryName.textContent = data.countryName;
-temperature.textContent = data.temperatureCelsius;
-conditionText.textContent = data.conditionText;
-conditionIcon.src = data.conditionIcon;
+async function handleSubmit(event) {
+  event.preventDefault();
+  let userInput = document.getElementById("user-input").value.toLowerCase();
+  userInput = userInput.replace(/\s+/g, "-");
+  const newData = await getWeatherData(userInput);
+  renderContent(newData);
+}
+
+function renderContent(data) {
+  document.getElementById("city-name").textContent = data.cityName;
+  document.getElementById("country-name").textContent = data.countryName;
+  document.getElementById("temperature").textContent = data.temperatureCelsius;
+  document.getElementById("condition-text").textContent = data.conditionText;
+  document.getElementById("condition-icon").src = data.conditionIcon;
+}
