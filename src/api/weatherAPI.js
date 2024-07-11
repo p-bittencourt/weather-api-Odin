@@ -1,5 +1,5 @@
 export default async function fetchWeatherData(city = "london") {
-  const forecast = `http://api.weatherapi.com/v1/forecast.json?key=311546e1392e4de8a36214436240807&q=${city}&days=2`;
+  const forecast = `https://api.weatherapi.com/v1/forecast.json?key=311546e1392e4de8a36214436240807&q=${city}&days=2`;
   try {
     const response = await fetch(forecast);
     const data = await response.json();
