@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Watch</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div class="content">
+      <h1>Weather Watch</h1>
+      <form id="user-input-form" method="post">
+        <div class="input-container">
+          <label for="user-input">Enter a city:</label>
+          <input
+            name="user-input"
+            type="text"
+            id="user-input"
+            placeholder="London"
+          />
+          <button type="submit" class="weather-btn">Search</button>
+        </div>
+      </form>
+      <div class="weather-card">
+        <h3>Current</h3>
+        <div class="top">
+          <div class="city-info">
+            <h2 id="city-name"></h2>
+            <p id="country-name"></p>
+          </div>
+          <div class="weather-info">
+            <h2 id="temperature"></h2>
+            <p id="condition-text"></p>
+          </div>
+          <div class="weather-icon">
+            <img src="#" alt="condition-icon" id="condition-icon" />
+          </div>
+        </div>
+        <div class="mid">
+          <h4 id="max-temp"></h4>
+          <h4 id="min-temp"></h4>
+        </div>
+        <h3>Tomorrow's forecast</h3>
+        <div class="bottom">
+          <div class="forecast-temperatures">
+            <h4 id="tomorrow-max"></h4>
+            <h4 id="tomorrow-min"></h4>
+          </div>
+          <div class="forecast-condition">
+            <p id="forecast-text"></p>
+            <img src="#" alt="forecast-icon" id="forecast-icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
